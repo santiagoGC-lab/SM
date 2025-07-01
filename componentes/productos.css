@@ -1,13 +1,10 @@
 /* Estilos específicos para productos */
 :root {
-    --primary-color: #395886; /* Azul principal */
-    --secondary-color: #395886; /* Azul oscuro */
-    --tertiary-color: #638ECB; /* Azul intermedio */
-    --accent-color: #8AAEE0; /* Azul medio para acentos */
-    --border-color: #B1C9EF; /* Azul claro para bordes */
+    --color-primario:  #015938; /* Azul principal */
+    --color-secundario: #007B55; /* Azul oscuro */
+    --color-borde: #015938;/* Azul claro para bordes */
     --light-bg: #F0F3FA; /* Fondo claro */
-    --text-color: #333333;
-    --shadow-color: rgba(61, 93, 238, 0.15);
+    --texto: #333;
 }
 
 body {
@@ -20,7 +17,7 @@ body {
 
 .sidebar {
     width: 250px;
-    background-color: var(--primary-color);
+    background-color: var(--color-primario);
     color: white;
     height: 100vh;
     position: fixed;
@@ -31,18 +28,6 @@ body {
     z-index: 1000;
 }
 
-.sidebar::-webkit-scrollbar {
-    width: 6px;
-}
-
-.sidebar::-webkit-scrollbar-track {
-    background: rgba(255, 255, 255, 0.1);
-}
-
-.sidebar::-webkit-scrollbar-thumb {
-    background: rgba(255, 255, 255, 0.3);
-    border-radius: 3px;
-}
 
 .sidebar-header {
     padding: 20px 15px;
@@ -50,10 +35,10 @@ body {
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.sidebar-header h1 {
-    margin: 0;
-    font-size: 1.8rem;
-    transition: opacity 0.3s ease;
+.sidebar-header img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
 }
 
 .sidebar-menu {
@@ -122,7 +107,7 @@ body {
 }
 
 .main-content::-webkit-scrollbar-thumb {
-    background: var(--primary-color);
+    background: var(--color-primario);
     border-radius: 4px;
 }
 
@@ -157,7 +142,7 @@ body {
 
 .search-bar:focus-within {
     background: white;
-    border-color: var(--primary-color);
+    border-color: var(--color-primario);
     box-shadow: 0 0 10px rgba(57, 169, 0, 0.2);
 }
 
@@ -177,7 +162,7 @@ body {
 }
 
 .search-bar:focus-within i {
-    color: var(--primary-color);
+    color: var(--color-primario);
 }
 
 .action-buttons {
@@ -217,7 +202,7 @@ body {
 }
 
 .btn-primary {
-    background: var(--primary-color);
+    background: var(--color-primario);
     color: white;
 }
 
@@ -247,7 +232,7 @@ body {
 }
 
 .table-header {
-    background: var(--primary-color);
+    background: var(--color-primario);
     color: white;
     padding: 15px 20px;
     display: flex;
@@ -280,7 +265,7 @@ body {
 }
 
 .table-container::-webkit-scrollbar-thumb {
-    background: var(--primary-color);
+    background: var(--color-primario);
     border-radius: 4px;
 }
 
@@ -406,9 +391,9 @@ tbody tr:hover {
 }
 
 .page-item.active {
-    background-color: var(--primary-color);
+    background-color: var(--color-primario);
     color: white;
-    border-color: var(--primary-color);
+    border-color: var(--color-primario);
 }
 
 /* Modal Styles */
@@ -454,14 +439,14 @@ tbody tr:hover {
     gap: 16px;
     margin-bottom: 24px;
     padding-bottom: 16px;
-    border-bottom: 2px solid var(--border-color);
+    border-bottom: 2px solid var(--color-borde);
 }
 
 /* Modal title styling */
 .modal-title {
     font-size: 1.4rem;
     font-weight: 700;
-    color: var(--primary-color);
+    color: var(--color-primario);
     margin: 0;
     letter-spacing: -0.01em;
 }
@@ -505,7 +490,7 @@ tbody tr:hover {
 .form-group select:focus,
 .form-group textarea:focus {
     outline: none;
-    border-color: var(--primary-color);
+    border-color: var(--color-primario);
     box-shadow: 0 0 5px rgba(57, 169, 0, 0.3);
 }
 
@@ -563,7 +548,7 @@ tbody tr:hover {
     top: 20px;
     left: 20px;
     z-index: 1001;
-    background: var(--primary-color);
+    background: var(--color-primario);
     color: white;
     border: none;
     border-radius: 50%;
@@ -635,7 +620,7 @@ tbody tr:hover {
 
 .spinner {
     border: 2px solid #f3f3f3;
-    border-top: 2px solid var(--primary-color);
+    border-top: 2px solid var(--color-primario);
     border-radius: 50%;
     width: 20px;
     height: 20px;
