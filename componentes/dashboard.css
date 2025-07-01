@@ -1,9 +1,13 @@
 :root {
-    --color-primario:  #015938; /* Azul principal */
-    --color-secundario: #007B55; /* Verde secundario */
+    --color-primario: #015938;
+    /* Azul principal */
+    --color-secundario: #007B55;
+    /* Verde secundario */
     --texto: #333;
-    --color-borde: #015938; /* Azul claro para bordes */
-    --light-bg: #F0F3FA; /* Fondo claro */
+    --color-borde: #015938;
+    /* Azul claro para bordes */
+    --light-bg: #F0F3FA;
+    /* Fondo claro */
 }
 
 /* Estilos específicos para el dashboard */
@@ -23,18 +27,12 @@ body {
     position: fixed;
     left: 0;
     top: 0;
-    overflow-y: hidden; /* Cambia a hidden para ocultar la barra */
+    overflow-y: hidden;
+    /* Cambia a hidden para ocultar la barra */
     transition: width 0.3s ease;
     z-index: 1000;
     display: flex;
     flex-direction: column;
-}
-
-.sidebar-header{
-    padding: 15px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
 .sidebar-header img {
@@ -43,9 +41,16 @@ body {
     border-radius: 50%;
 }
 
+.sidebar-header {
+    padding: 20px 15px;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
 .sidebar-menu {
     padding: 20px 0;
-    flex: 1 0 auto; /* Permite que el menú ocupe el espacio disponible */
+    flex: 1 0 auto;
+    /* Permite que el menú ocupe el espacio disponible */
 }
 
 .menu-cerrar {
@@ -55,12 +60,16 @@ body {
     transition: background-color 0.3s ease, opacity 0.3s ease;
     text-decoration: none;
     color: white;
-    position: absolute; /* Fija el botón en la parte inferior */
-    bottom: 0; /* Lo coloca en la parte inferior */
+    position: absolute;
+    /* Fija el botón en la parte inferior */
+    bottom: 0;
+    /* Lo coloca en la parte inferior */
     left: 0;
-    width: 100%; /* Ocupa todo el ancho de la sidebar */
+    width: 100%;
+    /* Ocupa todo el ancho de la sidebar */
     height: auto;
-    min-height: 40px; /* Ajusta la altura mínima */
+    min-height: 40px;
+    /* Ajusta la altura mínima */
     overflow: hidden;
 }
 
@@ -114,11 +123,13 @@ body {
     transition: width 0.3s ease;
 }
 
-.menu-item:hover::before, .menu-item.active::before {
+.menu-item:hover::before,
+.menu-item.active::before {
     width: 100%;
 }
 
-.menu-item:hover, .menu-item.active {
+.menu-item:hover,
+.menu-item.active {
     background-color: rgba(255, 255, 255, 0.1);
     opacity: 0.9;
 }
@@ -140,7 +151,8 @@ body {
 }
 
 .main-content::-webkit-scrollbar {
-    display: none; /* Oculta en WebKit (Chrome, Safari, Edge) */
+    display: none;
+    /* Oculta en WebKit (Chrome, Safari, Edge) */
 }
 
 
@@ -202,7 +214,8 @@ body {
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(57, 88, 134, 0.1), transparent); /* Adjusted to match #395886 */
+    background: linear-gradient(90deg, transparent, rgba(57, 88, 134, 0.1), transparent);
+    /* Adjusted to match #395886 */
     transition: left 0.5s ease;
 }
 
@@ -225,7 +238,8 @@ body {
 .card-icon {
     width: 50px;
     height: 50px;
-    background-color: rgba(57, 88, 134, 0.1); /* Adjusted to match  */
+    background-color: rgba(57, 88, 134, 0.1);
+    /* Adjusted to match  */
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -371,6 +385,7 @@ body {
     from {
         opacity: 0;
     }
+
     to {
         opacity: 1;
     }
@@ -403,24 +418,25 @@ body {
         width: 70px;
         transform: translateX(-100%);
     }
-    
+
     .sidebar.collapsed {
         transform: translateX(0);
     }
-    
-    .sidebar-header h1, .menu-text {
+
+    .sidebar-header h1,
+    .menu-text {
         opacity: 0;
         pointer-events: none;
     }
-    
+
     .main-content {
         margin-left: 0;
     }
-    
+
     .sidebar-toggle {
         display: block;
     }
-    
+
     .dashboard-cards {
         grid-template-columns: 1fr;
     }
@@ -440,9 +456,11 @@ body {
     0% {
         opacity: 1;
     }
+
     50% {
         opacity: 0.8;
     }
+
     100% {
         opacity: 1;
     }
