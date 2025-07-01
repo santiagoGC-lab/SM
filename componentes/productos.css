@@ -1,9 +1,13 @@
 /* Estilos específicos para productos */
 :root {
-    --color-primario:  #015938; /* Azul principal */
-    --color-secundario: #007B55; /* Azul oscuro */
-    --color-borde: #015938;/* Azul claro para bordes */
-    --light-bg: #F0F3FA; /* Fondo claro */
+    --color-primario: #015938;
+    /* Azul principal */
+    --color-secundario: #007B55;
+    /* Azul oscuro */
+    --color-borde: #015938;
+    /* Azul claro para bordes */
+    --light-bg: #F0F3FA;
+    /* Fondo claro */
     --texto: #333;
 }
 
@@ -45,6 +49,54 @@ body {
     padding: 20px 0;
 }
 
+.menu-cerrar {
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s ease, opacity 0.3s ease;
+    text-decoration: none;
+    color: white;
+    position: absolute;
+    /* Fija el botón en la parte inferior */
+    bottom: 0;
+    /* Lo coloca en la parte inferior */
+    left: 0;
+    width: 100%;
+    /* Ocupa todo el ancho de la sidebar */
+    height: auto;
+    min-height: 40px;
+    /* Ajusta la altura mínima */
+    overflow: hidden;
+}
+
+.menu-cerrar::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 0;
+    background: rgba(255, 255, 255, 0.1);
+    transition: width 0.3s ease;
+}
+
+.menu-cerrar:hover::before,
+.menu-cerrar.active::before {
+    width: 100%;
+}
+
+.menu-cerrar:hover,
+.menu-cerrar.active {
+    background-color: rgba(255, 255, 255, 0.1);
+    opacity: 0.9;
+}
+
+.menu-cerrar i {
+    margin-right: 10px;
+    width: 20px;
+    text-align: center;
+}
+
 .menu-item {
     padding: 12px 20px;
     display: flex;
@@ -67,11 +119,13 @@ body {
     transition: width 0.3s ease;
 }
 
-.menu-item:hover::before, .menu-item.active::before {
+.menu-item:hover::before,
+.menu-item.active::before {
     width: 100%;
 }
 
-.menu-item:hover, .menu-item.active {
+.menu-item:hover,
+.menu-item.active {
     background-color: rgba(255, 255, 255, 0.1);
     transform: translateX(5px);
 }
@@ -274,7 +328,8 @@ table {
     border-collapse: collapse;
 }
 
-th, td {
+th,
+td {
     padding: 12px 15px;
     text-align: left;
     border-bottom: 1px solid #eee;
@@ -400,7 +455,8 @@ tbody tr:hover {
 .modal {
     display: none;
     position: fixed;
-    inset: 0; /* Shorthand for top/right/bottom/left: 0 */
+    inset: 0;
+    /* Shorthand for top/right/bottom/left: 0 */
     z-index: 2000;
     background-color: rgba(0, 0, 0, 0.6);
     animation: fadeIn 0.3s ease;
@@ -422,7 +478,8 @@ tbody tr:hover {
     background: white;
     border-radius: 12px;
     padding: 24px;
-    width: min(90%, 500px); /* Responsive width with max constraint */
+    width: min(90%, 500px);
+    /* Responsive width with max constraint */
     max-height: 85vh;
     overflow-y: auto;
     animation: slideInUp 0.4s cubic-bezier(0.16, 1, 0.3, 1);
@@ -509,6 +566,7 @@ tbody tr:hover {
         opacity: 0;
         transform: translateY(-30px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -520,6 +578,7 @@ tbody tr:hover {
         opacity: 0;
         transform: translateY(30px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -527,8 +586,13 @@ tbody tr:hover {
 }
 
 @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 @keyframes slideInUp {
@@ -536,6 +600,7 @@ tbody tr:hover {
         opacity: 0;
         transform: translateY(50px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -569,43 +634,44 @@ tbody tr:hover {
         width: 70px;
         transform: translateX(-100%);
     }
-    
+
     .sidebar.collapsed {
         transform: translateX(0);
     }
-    
-    .sidebar-header h1, .menu-text {
+
+    .sidebar-header h1,
+    .menu-text {
         opacity: 0;
         pointer-events: none;
     }
-    
+
     .main-content {
         margin-left: 0;
     }
-    
+
     .sidebar-toggle {
         display: block;
     }
-    
+
     .header {
         flex-direction: column;
         align-items: flex-start;
         gap: 15px;
     }
-    
+
     .search-bar {
         width: 100%;
     }
-    
+
     .action-buttons {
         width: 100%;
         justify-content: space-between;
     }
-    
+
     .products-table {
         overflow-x: auto;
     }
-    
+
     .modal-content {
         width: 95%;
         margin: 10px;
@@ -630,6 +696,11 @@ tbody tr:hover {
 }
 
 @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
