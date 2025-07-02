@@ -1,3 +1,8 @@
+<?php
+require_once '../servicios/verificar_sesion.php';
+verificarSesion();
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -45,11 +50,11 @@
                 <i class="fas fa-chart-bar"></i>
                 <span class="menu-text">Reportes</span>
             </a>
-            <a href="configuracion.php" class="menu-item">
+            <a href="configuracion.html" class="menu-item">
                 <i class="fas fa-cog"></i>
                 <span class="menu-text">Configuración</span>
             </a>
-            <a href="../login.html" class="menu-cerrar">
+            <a href="../servicios/cerrar_sesion.php" class="menu-cerrar">
                 <i class="fas fa-sign-out-alt"></i>
                 <span class="menu-text">Cerrar Sesión</span>
             </a>

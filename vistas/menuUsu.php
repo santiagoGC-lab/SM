@@ -1,3 +1,7 @@
+<?php
+require_once '../servicios/verificar_sesion.php';
+verificarSesion();
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -17,7 +21,7 @@
                 <li><a href="inicio.html">Inicio</a></li>
                 <li><a href="menuUsu.html" class="active">Mi Perfil</a></li>
                 <li><a href="misReservas.html">Mis Reservas</a></li>
-                <li><a href="login.html">Cerrar Sesión</a></li>
+                <a href="../servicios/cerrar_sesion.php" class="menu-cerrar">
             </ul>
         </nav>
 
