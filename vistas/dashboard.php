@@ -75,7 +75,7 @@ verificarSesion();
         </div>
         
         <div class="dashboard-cards">
-            <div class="card" onclick="navigateTo('productos.html')">
+            <div class="card" onclick="navigateTo('productos.php')">
                 <div class="card-header">
                     <h3 class="card-title">Total Productos</h3>
                     <div class="card-icon">
@@ -86,7 +86,7 @@ verificarSesion();
                 <div class="card-footer">+12% desde el mes pasado</div>
             </div>
             
-            <div class="card" onclick="navigateTo('categorias.html')">
+            <div class="card" onclick="navigateTo('categorias.php')">
                 <div class="card-header">
                     <h3 class="card-title">Categorías</h3>
                     <div class="card-icon">
@@ -97,7 +97,7 @@ verificarSesion();
                 <div class="card-footer">+3 nuevas categorías</div>
             </div>
             
-            <div class="card" onclick="navigateTo('movimientos.html')">
+            <div class="card" onclick="navigateTo('movimientos.php')">
                 <div class="card-header">
                     <h3 class="card-title">Movimientos Hoy</h3>
                     <div class="card-icon">
