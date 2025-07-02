@@ -23,20 +23,20 @@ verificarSesion();
         <i class="fas fa-bars"></i>
     </button>
 
-    <div class="sidebar" id="sidebar">
+     <div class="sidebar" id="sidebar">
         <div class="sidebar-header">
-            <img src="../componentes/img/logo2.png" alt="Logo" />
+           <img src="../componentes/img/logo2.png" alt="Logo" />
         </div>
         <div class="sidebar-menu">
-            <a href="dashboard.php" class="menu-item ">
+            <a href="dashboard.php" class="menu-item active">
                 <i class="fas fa-tachometer-alt"></i>
                 <span class="menu-text">Inicio</span>
             </a>
-            <a href="productos.html" class="menu-item">
+            <a href="productos.php" class="menu-item">
                 <i class="fas fa-box"></i>
                 <span class="menu-text">Productos</span>
             </a>
-            <a href="categorias.html" class="menu-item active">
+            <a href="categorias.php" class="menu-item">
                 <i class="fas fa-tags"></i>
                 <span class="menu-text">Categorías</span>
             </a>
@@ -52,7 +52,7 @@ verificarSesion();
                 <i class="fas fa-chart-bar"></i>
                 <span class="menu-text">Reportes</span>
             </a>
-            <a href="configuracion.php" class="menu-item">
+            <a href="configuracion.html" class="menu-item">
                 <i class="fas fa-cog"></i>
                 <span class="menu-text">Configuración</span>
             </a>
