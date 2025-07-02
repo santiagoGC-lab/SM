@@ -10,6 +10,7 @@ verificarSesion();
     <title>SM - Usuarios</title>
     <link rel="stylesheet" href="../componentes/dashboard.css" />
     <link rel="stylesheet" href="../componentes/usuarios.css" />
+    <link rel="icon" type="image/x-icon" href="../componentes/img/favicon.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
 <body>
@@ -35,6 +36,10 @@ verificarSesion();
                 <i class="fas fa-tags"></i>
                 <span class="menu-text">Categorías</span>
             </a>
+             <a href="usuarios.php" class="menu-item">
+               <i class="fa-solid fa-warehouse"></i>
+                <span class="menu-text">Inventarios</span>
+            </a>    
             <a href="movimientos.php" class="menu-item">
                 <i class="fas fa-exchange-alt"></i>
                 <span class="menu-text">Movimientos</span>
@@ -98,5 +103,111 @@ verificarSesion();
             window.location.href = 'menuUsu.html';
         };
     </script>
+<!-- Modal de Edición -->
+<div id="modalEditar" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Editar Usuario</h2>
+        <form id="formEditar">
+            <input type="hidden" id="userId" name="id">
+            <div class="form-group">
+                <label for="numero_documento">Número de Documento:</label>
+                <input type="text" id="numero_documento" name="numero_documento" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" class="form-control" required>
+            </div>
+            <button type="submit" class="btn-login">Guardar Cambios</button>
+        </form>
+    </div>
+</div>
+
+<script>
+    // Función para editar usuario
+    function editarUsuario(id) {
+        // Obtener datos del usuario
+        fetch(`../servicios/obtener_usuario.php?id=${id}`)
+            .then(response => response.json())
+            .then(usuario => {
+                // Llenar el formulario con los datos del usuario
+                document.getElementById('userId').value = usuario.id;
+                document.getElementById('nombre').value = usuario.nombre;
+                document.getElementById('email').value = usuario.email;
+                document.getElementById('rol').value = usuario.rol;
+                document.getElementById('estado').value = usuario.estado;
+                
+                // Mostrar el modal
+                document.getElementById('modalEditar').style.display = 'block';
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('Error al obtener los datos del usuario');
+            });
+    }
+
+    // Función para eliminar usuario (mantener la misma que ya teníamos)
+    function eliminarUsuario(id) {
+        if (confirm('¿Estás seguro de que deseas eliminar este usuario?')) {
+            fetch(`../servicios/eliminar_usuario.php?id=${id}`, {
+                method: 'DELETE'
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    alert('Usuario eliminado correctamente');
+                    window.location.reload();
+                } else {
+                    alert('Error al eliminar el usuario: ' + data.message);
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('Error al eliminar el usuario');  
+            });
+        }
+    }
+
+    // Cerrar el modal
+    document.querySelector('.close').onclick = function() {
+        document.getElementById('modalEditar').style.display = 'none';
+    }
+
+    // Cerrar el modal si se hace clic fuera de él
+    window.onclick = function(event) {
+        if (event.target == document.getElementById('modalEditar')) {
+            document.getElementById('modalEditar').style.display = 'none';
+        }
+    }
+
+    // Manejar el envío del formulario
+    document.getElementById('formEditar').onsubmit = function(e) {
+        e.preventDefault();
+        const formData = new FormData(this);
+
+        fetch('../servicios/actualizar_usuario.php', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                alert('Usuario actualizado correctamente');
+                document.getElementById('modalEditar').style.display = 'none';
+                window.location.reload();
+            } else {
+                alert('Error al actualizar el usuario: ' + data.message);
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert('Error al actualizar el usuario');
+        });
+    }
+</script>
 </body>
 </html>

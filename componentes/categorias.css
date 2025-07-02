@@ -498,24 +498,28 @@ tbody tr:hover {
     }
 }
 
+/* Botón para colapsar sidebar */
 .sidebar-toggle {
-    display: none;
     position: fixed;
     top: 20px;
     left: 20px;
     z-index: 1001;
-    background: #4CAF50;
+    background: var(--color-primario);
     color: white;
     border: none;
-    padding: 10px;
-    border-radius: 5px;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
     cursor: pointer;
-    transition: opacity 0.3s ease;
+    transition: background-color 0.3s ease, opacity 0.3s ease;
+    display: none;
 }
 
 .sidebar-toggle:hover {
+    background: var(--color-secundario);
     opacity: 0.9;
 }
+
 
 @media (max-width: 768px) {
     .sidebar {

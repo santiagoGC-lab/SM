@@ -1,10 +1,9 @@
 :root {
-    --color-primario: #395886;
-    --color-secundario: #395886;
+    --color-primario: #015938;
+    --color-secundario: #007b55;
     --texto: #333;
     --bg-color: #F0F3FA;
-    --color-borde: #D5DEEF;
-    --texto-secundario: #B1C9EF;
+    --color-borde: #015b3a;
     --color-enlace: #8AAEE0;
     --color-error: #e74c3c;
     --color-correcto: #27ae60;
@@ -50,11 +49,6 @@ body {
 .img-auten h2 {
     font-size: 2.5rem;
     margin-bottom: 1rem;
-}
-
-.img-auten p {
-    font-size: 1.1rem;
-    opacity: 0.9;
 }
 
 .form-auten {

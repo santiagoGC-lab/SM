@@ -2,7 +2,7 @@
 require_once '../servicios/conexion.php';
 
 // Obtener la conexión
-$conexion = obtenerConexion();
+$conexion = conectarDB();
 
 // Consultar usuarios
 $query = "SELECT id, nombre, email, rol, estado FROM usuarios";

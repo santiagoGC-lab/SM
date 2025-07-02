@@ -15,7 +15,6 @@ verificarSesion();
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     <!-- Añadir FontAwesome para iconos -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="../public/componentes/productos.css">
 </head>
 <body>
      <div class="sidebar" id="sidebar">
@@ -34,6 +33,10 @@ verificarSesion();
             <a href="categorias.php" class="menu-item">
                 <i class="fas fa-tags"></i>
                 <span class="menu-text">Categorías</span>
+            </a>
+             <a href="usuarios.php" class="menu-item">
+               <i class="fa-solid fa-warehouse"></i>
+                <span class="menu-text">Inventarios</span>
             </a>
             <a href="movimientos.php" class="menu-item">
                 <i class="fas fa-exchange-alt"></i>
@@ -92,7 +95,7 @@ verificarSesion();
                 <tbody>
                     <tr>
                         <td>001</td>
-                        <td><img src="https://via.placeholder.com/40" alt="Producto" style="border-radius: 4px;"></td>
+                        <td><img src="" alt="Producto" style="border-radius: 4px;"></td>
                         <td>Laptop HP Pavilion</td>
                         <td>Electrónicos</td>
                         <td>25</td>
@@ -105,7 +108,7 @@ verificarSesion();
                     </tr>
                     <tr>
                         <td>002</td>
-                        <td><img src="https://via.placeholder.com/40" alt="Producto" style="border-radius: 4px;"></td>
+                        <td><img src="" alt="Producto" style="border-radius: 4px;"></td>
                         <td>Monitor Dell 27"</td>
                         <td>Electrónicos</td>
                         <td>8</td>
@@ -118,7 +121,7 @@ verificarSesion();
                     </tr>
                     <tr>
                         <td>003</td>
-                        <td><img src="https://via.placeholder.com/40" alt="Producto" style="border-radius: 4px;"></td>
+                        <td><img src="" alt="Producto" style="border-radius: 4px;"></td>
                         <td>Teclado Mecánico RGB</td>
                         <td>Accesorios</td>
                         <td>0</td>
@@ -131,7 +134,7 @@ verificarSesion();
                     </tr>
                     <tr>
                         <td>004</td>
-                        <td><img src="https://via.placeholder.com/40" alt="Producto" style="border-radius: 4px;"></td>
+                        <td><img src="" alt="Producto" style="border-radius: 4px;"></td>
                         <td>Mouse Inalámbrico</td>
                         <td>Accesorios</td>
                         <td>42</td>
@@ -144,7 +147,7 @@ verificarSesion();
                     </tr>
                     <tr>
                         <td>005</td>
-                        <td><img src="https://via.placeholder.com/40" alt="Producto" style="border-radius: 4px;"></td>
+                        <td><img src="" alt="Producto" style="border-radius: 4px;"></td>
                         <td>Impresora Multifuncional</td>
                         <td>Oficina</td>
                         <td>12</td>
@@ -570,6 +573,5 @@ verificarSesion();
             });
         });
     </script>
-    <script src="../public/js/admin-verification.js"></script>
 </body>
 </html>

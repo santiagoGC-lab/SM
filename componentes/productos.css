@@ -598,7 +598,6 @@ tbody tr:hover {
     }
 }
 
-/* Sidebar toggle button */
 .sidebar-toggle {
     position: fixed;
     top: 20px;
@@ -611,13 +610,13 @@ tbody tr:hover {
     width: 40px;
     height: 40px;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: background-color 0.3s ease, opacity 0.3s ease;
     display: none;
 }
 
 .sidebar-toggle:hover {
-    background: #2d7a00;
-    transform: scale(1.1);
+    background: var(--color-secundario);
+    opacity: 0.9;
 }
 
 @media (max-width: 768px) {

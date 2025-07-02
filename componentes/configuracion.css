@@ -1,10 +1,14 @@
 /* Estilos específicos para configuración */
 :root {
-    --primary-color: #395886; /* Azul principal */
-    --secondary-color: #395886; /* Azul oscuro */
-    --border-color: #B1C9EF; /* Azul claro para bordes */
-    --light-bg: #F0F3FA; /* Fondo claro */
-    --text-color: #333333;
+    --primary-color: #015938;
+    /* Azul principal */
+    --secondary-color: #007B55;
+    /* Azul oscuro */
+    --border-color: #015938;
+    /* Azul claro para bordes */
+    --light-bg: #F0F3FA;
+    /* Fondo claro */
+    --text-color: #333;
 }
 
 body {
@@ -50,7 +54,8 @@ body {
     color: white;
 }
 
-.menu-item:hover, .menu-item.active {
+.menu-item:hover,
+.menu-item.active {
     background-color: rgba(255, 255, 255, 0.1);
 }
 
@@ -146,7 +151,7 @@ body {
 }
 
 .form-control {
-    width: 100%;
+    width: 95%;
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 4px;
@@ -205,11 +210,11 @@ body {
     border-radius: 50%;
 }
 
-input:checked + .slider {
+input:checked+.slider {
     background-color: var(--primary-color);
 }
 
-input:checked + .slider:before {
+input:checked+.slider:before {
     transform: translateX(26px);
 }
 
@@ -219,7 +224,8 @@ input:checked + .slider:before {
     margin-top: 15px;
 }
 
-.permission-table th, .permission-table td {
+.permission-table th,
+.permission-table td {
     padding: 10px;
     text-align: left;
     border-bottom: 1px solid #eee;
@@ -281,27 +287,6 @@ input:checked + .slider:before {
     font-weight: 500;
 }
 
-/* Estilos para configuraciones de sistema */
-.system-config {
-    background: linear-gradient(135deg, #f0fff4 0%, #ffffff 100%);
-    border-left: 4px solid #28a745;
-}
-
-.system-config h3 {
-    color: #28a745;
-}
-
-.system-badge {
-    background: #28a745;
-    color: white;
-    padding: 2px 8px;
-    border-radius: 12px;
-    font-size: 0.75rem;
-    margin-left: 10px;
-    font-weight: 500;
-}
-
-/* Estilos para alertas y notificaciones */
 .alert {
     padding: 12px 15px;
     border-radius: 6px;
@@ -339,54 +324,18 @@ input:checked + .slider:before {
 }
 
 @keyframes pulse {
-    0% { opacity: 1; }
-    50% { opacity: 0.5; }
-    100% { opacity: 1; }
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
-
-/* Estilos para configuraciones de tema */
-.theme-selector {
-    display: flex;
-    gap: 10px;
-    margin-top: 10px;
-}
-
-.theme-option {
-    width: 40px;
-    height: 40px;
-    border-radius: 8px;
-    cursor: pointer;
-    border: 3px solid transparent;
-    transition: all 0.3s;
-    position: relative;
-}
-
-.theme-option.selected {
-    border-color: var(--primary-color);
-    transform: scale(1.1);
-}
-
-.theme-option::after {
-    content: '✓';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-weight: bold;
-    opacity: 0;
-    transition: opacity 0.3s;
-}
-
-.theme-option.selected::after {
-    opacity: 1;
-}
-
-.theme-blue { background: linear-gradient(135deg, #3D5DEF, #638ECB); }
-.theme-green { background: linear-gradient(135deg, #4caf50, #81c784); }
-.theme-purple { background: linear-gradient(135deg, #9c27b0, #ba68c8); }
-.theme-orange { background: linear-gradient(135deg, #ff9800, #ffb74d); }
-
 /* Estilos para configuraciones de seguridad */
 .security-level {
     display: flex;
@@ -427,21 +376,22 @@ input:checked + .slider:before {
     .sidebar {
         width: 70px;
     }
-    
-    .sidebar-header h1, .menu-text {
+
+    .sidebar-header h1,
+    .menu-text {
         display: none;
     }
-    
+
     .main-content {
         margin-left: 70px;
     }
-    
+
     .header {
         flex-direction: column;
         align-items: flex-start;
         gap: 15px;
     }
-    
+
     .form-row {
         flex-direction: column;
         gap: 0;

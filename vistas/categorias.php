@@ -15,7 +15,6 @@ verificarSesion();
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     <!-- Añadir FontAwesome para iconos -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="../public/componentes/categorias.css">
 </head>
 
 <body>
@@ -40,6 +39,10 @@ verificarSesion();
                 <i class="fas fa-tags"></i>
                 <span class="menu-text">Categorías</span>
             </a>
+            <a href="usuarios.php" class="menu-item">
+               <i class="fa-solid fa-warehouse"></i>
+                <span class="menu-text">Inventarios</span>
+            </a>
             <a href="movimientos.php" class="menu-item">
                 <i class="fas fa-exchange-alt"></i>
                 <span class="menu-text">Movimientos</span>
@@ -48,7 +51,7 @@ verificarSesion();
                 <i class="fas fa-users"></i>
                 <span class="menu-text">Usuarios</span>
             </a>
-            <a href="reportes.php" class="menu-item">
+            <a href="reportes.html" class="menu-item">
                 <i class="fas fa-chart-bar"></i>
                 <span class="menu-text">Reportes</span>
             </a>
@@ -513,7 +516,6 @@ verificarSesion();
             });
         });
     </script>
-    <script src="../public/js/admin-verification.js"></script>
 </body>
 
 </html>

@@ -39,6 +39,10 @@ verificarSesion();
                 <i class="fas fa-tags"></i>
                 <span class="menu-text">Categorías</span>
             </a>
+             <a href="usuarios.php" class="menu-item">
+               <i class="fa-solid fa-warehouse"></i>
+                <span class="menu-text">Inventarios</span>
+            </a>
             <a href="movimientos.php" class="menu-item active">
                 <i class="fas fa-exchange-alt"></i>
                 <span class="menu-text">Movimientos</span>

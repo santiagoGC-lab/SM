@@ -1,32 +1,3 @@
-<?php
-require_once '../servicios/conexion.php';
-session_start();
-
-require_once '../servicios/verificar_sesion.php';
-verificarSesion();
-
-$conexion = conectarDB();
-
-$empresa = [
-    'nombre' => '',
-    'nif' => '',
-    'direccion' => '',
-    'ciudad' => '',
-    'telefono' => '',
-    'email' => ''
-];
-
-$sql = "SELECT * FROM empresa WHERE id = 2";
-$result = $conexion->query($sql);
-
-if ($result && $result->num_rows > 0) {
-    $empresa = $result->fetch_assoc();
-}
-
-// Cerrar la conexión después de usarla
-$conexion->close();
-?>
-
 
 <!DOCTYPE html>
 <html lang="es">
@@ -43,12 +14,13 @@ $conexion->close();
     <button class="sidebar-toggle" id="sidebarToggle">
         <i class="fas fa-bars"></i>
     </button>
-   <div class="sidebar" id="sidebar">
+   
+    <div class="sidebar" id="sidebar">
         <div class="sidebar-header">
            <img src="../componentes/img/logo2.png" alt="Logo" />
         </div>
         <div class="sidebar-menu">
-            <a href="dashboard.php" class="menu-item active">
+            <a href="dashboard.php" class="menu-item ">
                 <i class="fas fa-tachometer-alt"></i>
                 <span class="menu-text">Inicio</span>
             </a>
@@ -59,6 +31,10 @@ $conexion->close();
             <a href="categorias.php" class="menu-item">
                 <i class="fas fa-tags"></i>
                 <span class="menu-text">Categorías</span>
+            </a>
+             <a href="usuarios.php" class="menu-item">
+               <i class="fa-solid fa-warehouse"></i>
+                <span class="menu-text">Inventarios</span>
             </a>
             <a href="movimientos.php" class="menu-item">
                 <i class="fas fa-exchange-alt"></i>
@@ -72,7 +48,7 @@ $conexion->close();
                 <i class="fas fa-chart-bar"></i>
                 <span class="menu-text">Reportes</span>
             </a>
-            <a href="configuracion.php" class="menu-item">
+            <a href="configuracion.php" class="menu-item active">
                 <i class="fas fa-cog"></i>
                 <span class="menu-text">Configuración</span>
             </a>
@@ -107,26 +83,6 @@ $conexion->close();
                     <label>Teléfono</label>
                     <input type="tel" class="form-control" placeholder="Teléfono..." />
                 </div>
-            </div>
-        </div>
-
-        <div class="config-section system-config">
-            <h3>Preferencias del Sistema <span class="system-badge">Sistema</span></h3>
-            <div class="form-group">
-                <label>Tema del Sistema</label>
-                <div class="theme-selector">
-                    <div class="theme-option theme-blue selected"></div>
-                    <div class="theme-option theme-green"></div>
-                    <div class="theme-option theme-purple"></div>
-                    <div class="theme-option theme-orange"></div>
-                </div>
-            </div>
-            <div class="form-group">
-                <label>Notificaciones</label>
-                <label class="switch">
-                    <input type="checkbox" checked>
-                    <span class="slider"></span>
-                </label>
             </div>
         </div>
 
