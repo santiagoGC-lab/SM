@@ -38,11 +38,11 @@ verificarSesion();
                 <i class="fas fa-tags"></i>
                 <span class="menu-text">Categorías</span>
             </a>
-            <a href="movimientos.html" class="menu-item">
+            <a href="movimientos.php" class="menu-item">
                 <i class="fas fa-exchange-alt"></i>
                 <span class="menu-text">Movimientos</span>
             </a>
-            <a href="usuarios.html" class="menu-item">
+            <a href="usuarios.php" class="menu-item">
                 <i class="fas fa-users"></i>
                 <span class="menu-text">Usuarios</span>
             </a>
@@ -50,7 +50,7 @@ verificarSesion();
                 <i class="fas fa-chart-bar"></i>
                 <span class="menu-text">Reportes</span>
             </a>
-            <a href="configuracion.html" class="menu-item">
+            <a href="configuracion.php" class="menu-item">
                 <i class="fas fa-cog"></i>
                 <span class="menu-text">Configuración</span>
             </a>
