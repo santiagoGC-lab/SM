@@ -10,7 +10,6 @@ verificarSesion();
     <title>SM - Usuarios</title>
     <link rel="stylesheet" href="../componentes/dashboard.css" />
     <link rel="stylesheet" href="../componentes/usuarios.css" />
-    <link rel="icon" type="image/x-icon" href="../componentes/img/favicon.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
 <body>
@@ -36,10 +35,6 @@ verificarSesion();
                 <i class="fas fa-tags"></i>
                 <span class="menu-text">Categorías</span>
             </a>
-             <a href="usuarios.php" class="menu-item">
-               <i class="fa-solid fa-warehouse"></i>
-                <span class="menu-text">Inventarios</span>
-            </a>    
             <a href="movimientos.php" class="menu-item">
                 <i class="fas fa-exchange-alt"></i>
                 <span class="menu-text">Movimientos</span>

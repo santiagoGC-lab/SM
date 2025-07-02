@@ -54,12 +54,12 @@ body {
     transition: background-color 0.3s ease, opacity 0.3s ease;
     text-decoration: none;
     color: white;
-    position: absolute; /* Fija el botón en la parte inferior */
-    bottom: 0; /* Lo coloca en la parte inferior */
+    position: absolute;
+    bottom: 0;
     left: 0;
-    width: 100%; /* Ocupa todo el ancho de la sidebar */
+    width: 100%;
     height: auto;
-    min-height: 40px; /* Ajusta la altura mínima */
+    min-height: 40px;
     overflow: hidden;
 }
 
